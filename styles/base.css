@@ -1,0 +1,12 @@
+body {
+  background-color: #212b31;
+  color: #a8a8a8;
+}
+
+h1 {
+  background-color: #780202;
+  color: #FF6E6E;
+}
+@media only screen and (max-width: 800px) {
+
+}
