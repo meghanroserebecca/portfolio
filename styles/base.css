@@ -3,10 +3,57 @@ body {
   color: #a8a8a8;
 }
 
-h1 {
+header {
   background-color: #780202;
   color: #FF6E6E;
+  border: 1px solid #000000;
+	overflow: hidden;
+	width: 100%;
 }
-@media only screen and (max-width: 800px) {
 
+h1 {
+  border: 2px solid blue;
+  text-align: center;
+  max-width: 80%;
+  margin-left: 40%;
+  margin-right: 10%;
+  float: left;
+}
+
+.nav_div {
+}
+
+.hamburger {
+  width: 5%;
+  height: 5%;
+  min-height: 30px;
+  min-width: 30px;
+  border: 2px solid blue;
+  display: inline;
+  float: right;
+}
+
+.hamburger::after {
+  clear: both;
+}
+
+.nav_main ul {
+  display: none;
+  padding: 0;
+  list-style: none;
+ }.
+
+ .nav_main:hover ul {
+   display: block;
+   list-style: none;
+ }
+
+@media only screen and (min-width: 640px) {
+  .hamburger {
+    display: none;
+  }
+  .nav_main ul {
+    display: inline-block;
+    list-style: none;
+  }
 }
