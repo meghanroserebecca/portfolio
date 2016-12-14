@@ -1,4 +1,4 @@
-var projectObject [
+var projectObject = [
   {
     title: 'about me',
     category:    'early work',
