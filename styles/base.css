@@ -42,19 +42,36 @@ h1 {
   display: none;
   padding: 0;
   list-style: none;
- }.
+  clear: both;
+}
 
- .nav_main:hover ul {
-   display: block;
-   list-style: none;
- }
+.nav_main:hover ul {
+  display: block;
+  float: right;
+}
 
 @media only screen and (min-width: 640px) {
   .hamburger {
     display: none;
   }
-  .nav_main ul {
-    display: inline-block;
-    list-style: none;
-  }
+
+.nav_main {
+  padding: .2em .2em .2em 2em;
+}
+
+.nav_main ul {
+  display: inline-block;
+}
+
+.sub_li {
+  display: none;
+}
+
+.nav_main ul li.main_li {
+  display: inline;
+  border-bottom: none;
+}
+
+li.main_li:hover .sub_li {
+  display: block;
 }
