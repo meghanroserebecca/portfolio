@@ -60,7 +60,7 @@ h1 {
 }
 
 .nav_main ul {
-  display: inline-block;
+  display: block;
 }
 
 .sub_li {
@@ -68,10 +68,15 @@ h1 {
 }
 
 .nav_main ul li.main_li {
-  display: inline;
+  display: inline-block;
   border-bottom: none;
 }
 
 li.main_li:hover .sub_li {
+  display: inline-block;
+}
+
+.nav_main:hover ul {
   display: block;
+  float: none;
 }
