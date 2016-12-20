@@ -15,20 +15,20 @@
       </section>
         <div class="nav_div">
             <nav class="nav_main">
-              <img class="hamburger" src="assets/Hamburger_icon.png">
-              <ul>
-                <li class="main_li">Social
+              <a href="#"><img class="hamburger" src="assets/Hamburger_icon.png"></a>
+              <ul id="hamburger_menu">
+                <a href="#"><li class="main_li">Social</a><br />
                   <ul>
                     <li class="sub_li"><a href="https://www.github.com">Github Pages</a></li>
                     <li class="sub_li"><a href="https://www.facebook.com">Facebook</a></li>
                     <li class="sub_li"><a href="https://www.linkedin.com">Linked-In</a></li>
                   </ul>
                 </li>
-                <li class="main_li">Projects
+                <a href="#"><li class="main_li">Projects</a><br />
                   <ul>
-                    <li>Project #1</li>
-                    <li>Project #2</li>
-                    <li>Project #3</li>
+                    <a href="#"><li class="sub_li">Project #1</li></a>
+                    <a href="#"><li class="sub_li">Project #2</li></a>
+                    <a href="#"><li class="sub_li">Project #3</li></a>
                   </ul>
                 </li>
               </ul>
@@ -37,10 +37,25 @@
     </header>
     <main>
       <section id="projects">
+        <section id="articles" class="tab-content">
+        <div>
+          <ul id="filters">
+            <li>
+              <select id="commit-filter">
+                <option value="">-- Filter by Latest Commit --</option>
+              </select>
+            </li>
+            <li>
+              <select id="category-filter">
+                <option value="">-- Filter by Categories --</option>
+              </select>
+            </li>
+          </ul>
+        </div>
         <article class="template">
           <header>
             <h3>Title</h3>
-            <div class="category"><p>Category: <p></div>
+            <div class="category"><p class="category">Category: <p></div>
             <div class="latestCommit"></div><br />
             <address><a href="">Check out the GitHub Page for this project!</a></address>
           </header>
@@ -51,8 +66,8 @@
     <footer>
     </footer>
     <script src="https://ajax.googleapis.com/ajax/libs/jquery/1.8.3/jquery.min.js"></script>
-    <script src="http://code.jquery.com/ui/1.9.2/jquery-ui.js"></script>
     <script type="text/javascript" src="logic/projectObjects.js"></script>
     <script type="text/javascript" src="logic/projects.js"></script>
+    <script type="text/javascript" src="logic/projectView.js"></script>
   </body>
 </html>

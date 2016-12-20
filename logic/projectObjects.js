@@ -10,15 +10,15 @@ var projectObject = [
   {
     title: 'salmon cookies',
     category:    'early work',
-    latestCommit: '2016-11-13',
+    latestCommit: '2016-11-15',
     gitHubUrl:   'https://github.com/meghanroserebecca/cookie-stand',
     description: '<p>Cookie Stand, aka Salmon Cookies, is an early learning project exploring DOM manipulation, Javascript and CSS</p>'
   },
 
   {
     title: 'lyriclibs',
-    category:    'early work',
-    latestCommit: '2016-11-13',
+    category:    'middle work',
+    latestCommit: '2016-12-09',
     gitHubUrl:   'https://github.com/Team-Lyric/madlib',
     description: '<p>This was a collaborative final project for the Code Fellows Code201 course, bringing together the knowledge gleaned from the entire course. Javascript, DOM manipulation, local storage, CSS and graphic design work are featured here in an app designed around the concept of Mad Libs&trade, but with lyrics to popular songs.</p>'
   },
