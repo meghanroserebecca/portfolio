@@ -9,7 +9,14 @@ function Project (opts) {
 }
 
 Project.prototype.toHTML = function() {
-  var $newProject = $('article.template').clone();
+  var source = $('#portfolio-template').html(); //grabbing the template (by id) out of our html and bringing it here to pass to Handlebars
+  var template = Handlebars.compile(source); //This returns to us a function that takes the context as an argument and returns HTML
+
+  var html = template(this);
+
+  return html;
+
+  /*var $newProject = $('article.template').clone();
   $newProject.find('h3').html(this.title);
   $newProject.find('div.category').html(this.category);
   $newProject.find('div.latestCommit').html(this.latestCommit);
@@ -18,7 +25,7 @@ Project.prototype.toHTML = function() {
 
   $newProject.removeAttr('class');
 
-  return $newProject;
+  return $newProject;*/
 };
 
 projectObject.forEach(function(ele) {
