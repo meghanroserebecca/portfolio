@@ -19,7 +19,7 @@ projectView.handleCommitFilter = function() {
     var commit = $(this).val();
     if (commit) {
       $('article').hide();
-      $('article[.latestCommit="' + commit + '"]').fadeIn(3000);
+      $('div[.latestCommit="' + commit + '"]').fadeIn(3000);
     } else {
       $('article').not('template').show();
     }
@@ -32,13 +32,13 @@ projectView.handleCategoryFilter = function() {
     var category = ($('#category-filter').val());
     if (category) {
       $('article').hide();
-      $('article p[.category"' + category + '"]').fadeIn(3000);
+      $('p[.category"' + category + '"]').fadeIn(3000);
     }
     else {
       $('article').not('template').show();
     }
 
-    $('#author-filter').val('');
+    $('#category-filter').val('');
 
   });
 };
