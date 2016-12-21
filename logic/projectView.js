@@ -6,7 +6,7 @@ projectView.populateFilters = function() {
     latestCommit = $(this).find('.commitDate').text();
     optionTag = '<option value="' + latestCommit + '">' + latestCommit + '</option>';
     $('#commit-filter').append(optionTag);
-    category = $(this).find('.category').text();
+    category = $(this).find('.category-type').text();
     optionTag = '<option value="' + category + '">' + category + '</option>';
     if ($('#category-filter option[value="' + category + '"]').length === 0) {
       $('#category-filter').append(optionTag);
@@ -28,7 +28,7 @@ projectView.handleCommitFilter = function() {
         }
       });
     } else {
-      $('article').not('template').show();
+      $('article').show();
     }
     $('#commit-filter').val('');
   });
@@ -36,15 +36,18 @@ projectView.handleCommitFilter = function() {
 
 projectView.handleCategoryFilter = function() {
   $('#category-filter').on('change', function() {
-    var category = ($('#category-filter').val());
+    var category = $(this).val();
     if (category) {
       $('article').hide();
-      $('p[.category"' + category + '"]').fadeIn(3000);
+      $('article').each(function() {
+        var categoryType = $(this).find('span.category-type').text();
+        if(category === categoryType) {
+          $(this).fadeIn(3000);
+        }
+      });
+    } else {
+      $('article').show();
     }
-    else {
-      $('article').not('template').show();
-    }
-
     $('#category-filter').val('');
 
   });
