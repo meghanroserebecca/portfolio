@@ -52,19 +52,22 @@
             </li>
           </ul>
         </div>
-        <article class="template">
+<script type="text/x-handlebars-template" id="portfolio-template">
+        <article>
           <header>
-            <h3>Title</h3>
-            <div class="category"><p class="category">Category: <p></div>
-            <div class="latestCommit"></div><br />
-            <address><a href="">Check out the GitHub Page for this project!</a></address>
+            <h3>{{title}}</h3>
+            <div class="category"><p>Category: <span class="category-type">{{category}}</span></p></div>
+            <div class="latestCommit">Last Commit Made On: <span class="commitDate">{{latestCommit}}</span></div><br />
+            <address><a href="{{{gitHubUrl}}}">Check out the GitHub Page for this project!</a></address>
           </header>
-          <section class="description"></section>
+          <section class="description">{{{description}}}</section>
         </article>
+      </script>
       </section>
     </main>
     <footer>
     </footer>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/handlebars.js/4.0.6/handlebars.js"></script>
     <script src="https://ajax.googleapis.com/ajax/libs/jquery/1.8.3/jquery.min.js"></script>
     <script type="text/javascript" src="logic/projectObjects.js"></script>
     <script type="text/javascript" src="logic/projects.js"></script>
