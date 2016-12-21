@@ -30,8 +30,8 @@ projectView.handleCommitFilter = function() {
     } else {
       $('article').show();
     }
-    $('#commit-filter').val('');
   });
+  $('#commit-filter').val('');
 };
 
 projectView.handleCategoryFilter = function() {
@@ -48,9 +48,8 @@ projectView.handleCategoryFilter = function() {
     } else {
       $('article').show();
     }
-    $('#category-filter').val('');
-
   });
+  $('#category-filter').val('');
 };
 
 
