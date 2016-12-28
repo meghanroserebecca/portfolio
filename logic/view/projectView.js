@@ -54,18 +54,16 @@ projectView.handleCategoryFilter = function() {
 
 projectView.renderIndexPage = function() {
   Project.projects.forEach(function(a){
-    $('#projects').append(a.toHtml('#portfolio-template'));
+    $('#projects').append(a.toHTML('#portfolio-template'));
     if($('#commit-filter option:contains("'+ a.commit + '")').length === 0) {
-      $('#commit-filter').append(a.toHtml('#commit-filter-template'));
+      $('#commit-filter').append(a.toHTML('#commit-filter-template'));
     };
     if($('#category-filter option:contains("'+ a.category + '")').length === 0) {
-      $('#category-filter').append(a.toHtml('#category-filter-template'));
+      $('#category-filter').append(a.toHTML('#category-filter-template'));
     };
   });
-  articleView.handleCategoryFilter();
-  articleView.handleAuthorFilter();
-  articleView.handleMainNav();
-  articleView.setTeasers();
+  projectView.handleCommitFilter();
+  projectView.handleCategoryFilter();
 };
 
 $.ajax('/data/projectObjects.json', {
