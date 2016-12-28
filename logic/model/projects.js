@@ -32,7 +32,8 @@ Project.prototype.toHTML = function() {
 
 
 Project.createAndPush = function(inputArr) {
-  inputArr.forEach(function(ele) {
+  inputArr.map(function(ele) {
     Project.projects.push(new Project(ele)); //maybe alter this
   });
+  console.log(inputArr);
 };
