@@ -52,7 +52,23 @@ projectView.handleCategoryFilter = function() {
   $('#category-filter').val('');
 };
 
+projectView.renderIndexPage = function() {
+  Project.projects.forEach(function(a){
+    $('#projects').append(a.toHTML('#portfolio-template'));
+  });
+  projectView.populateFilters();
+  projectView.handleCommitFilter();
+  projectView.handleCategoryFilter();
+};
 
-projectView.populateFilters();
-projectView.handleCommitFilter();
-projectView.handleCategoryFilter();
+$.ajax('/data/projectObjects.json', {
+  	method: 'GET',
+  	success: function(response) {
+    console.log(response);
+    Project.createAndPush(response);
+    projectView.renderIndexPage();
+  	},
+  	error: function(response) {
+  	console.log ('error', response);
+  }
+});
