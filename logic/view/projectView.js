@@ -56,12 +56,14 @@ projectView.renderIndexPage = function() {
   Project.projects.forEach(function(a){
     $('#projects').append(a.toHTML('#portfolio-template'));
     if($('#commit-filter option:contains("'+ a.commit + '")').length === 0) {
-      $('#commit-filter').append(a.toHTML('#commit-filter-template'));
+      $('#commit-filter').append(a.latestCommit.toHTML('#commit-filter-template'));
+      console.log(a);
     };
     if($('#category-filter option:contains("'+ a.category + '")').length === 0) {
-      $('#category-filter').append(a.toHTML('#category-filter-template'));
+      $('#category-filter').append(a.category.toHTML('#category-filter-template'));
     };
   });
+  //projectView.populateFilters();
   projectView.handleCommitFilter();
   projectView.handleCategoryFilter();
 };
