@@ -30,12 +30,9 @@ Project.prototype.toHTML = function() {
   return $newProject;*/
 };
 
-Project.sortAndPush = function(inputArr) {
-  inputArr.forEach(function(ele) {
-    inputArr.push(new Project(ele));
-  });
 
-  inputArr.forEach(function(a) {
-    $('#projects').append(a.toHTML()); //maybe alter this
+Project.createAndPush = function(inputArr) {
+  inputArr.forEach(function(ele) {
+    Project.projects.push(new Project(ele)); //maybe alter this
   });
 };
