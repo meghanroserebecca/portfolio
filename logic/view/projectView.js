@@ -62,10 +62,10 @@ projectView.renderIndexPage = function() {
       $('#category-filter').append(a.toHtml('#category-filter-template'));
     };
   });
-  articleView.handleCategoryFilter();
-  articleView.handleAuthorFilter();
-  articleView.handleMainNav();
-  articleView.setTeasers();
+  projectView.handleCategoryFilter();
+  projectView.handleAuthorFilter();
+  projectView.handleMainNav();
+  projectView.setTeasers();
 };
 
 $.ajax('/data/projectObjects.json', {
