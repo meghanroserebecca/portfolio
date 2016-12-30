@@ -18,16 +18,6 @@ Project.prototype.toHTML = function() {
 
   return html;
   $('#projects').append(html);
-  /*var $newProject = $('article.template').clone();
-  $newProject.find('h3').html(this.title);
-  $newProject.find('div.category').html(this.category);
-  $newProject.find('div.latestCommit').html(this.latestCommit);
-  $newProject.find('a').attr('href', this.gitHubUrl);
-  $newProject.find('section.description').html(this.description);
-
-  $newProject.removeAttr('class');
-
-  return $newProject;*/
 };
 
 
@@ -36,4 +26,5 @@ Project.createAndPush = function(inputArr) {
     Project.projects.push(new Project(ele)); //maybe alter this
   });
   console.log(inputArr);
+  console.log(Project.projects);
 };
