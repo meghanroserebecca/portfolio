@@ -22,6 +22,7 @@ QUnit.test('Any instance of Project should have access to toHTML method', functi
 });
 
 QUnit.test('Project.createAndPush should "convert" an array of Objects into an array of "Projects"', function(assert){
+  Project.projects = [];
   var mockObjArray = [
     {
       title: 'mock title',
@@ -38,4 +39,5 @@ QUnit.test('Project.createAndPush should "convert" an array of Objects into an a
   Project.createAndPush(mockObjArray);
 
   assert.equal(mockObjArray[0].title, Project.projects[0].title);
+  Project.projects = [];
 });
