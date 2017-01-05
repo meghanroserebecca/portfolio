@@ -2,7 +2,8 @@
   var aboutController = {};
 
   aboutController.reveal = function() {
-    $('#articles').hide().filter('#about-me').show();
+    $('section[id="articles"]').hide();
+    $('section[id="about-me"]').show();
   };
 
   module.aboutController = aboutController;

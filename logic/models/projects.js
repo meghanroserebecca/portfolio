@@ -25,6 +25,4 @@ Project.createAndPush = function(inputArr) {
   inputArr.map(function(ele) {
     Project.projects.push(new Project(ele)); //maybe alter this
   });
-  console.log(inputArr);
-  console.log(Project.projects);
 };

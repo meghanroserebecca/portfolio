@@ -55,7 +55,7 @@
 
   projectView.renderIndexPage = function() {
     Project.projects.forEach(function(a){
-      $('#projects').append(a.toHTML('#portfolio-template'));
+      $('#articles').append(a.toHTML());
     });
     projectView.populateFilters();
     projectView.handleCommitFilter();
